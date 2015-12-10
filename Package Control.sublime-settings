@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Anaconda",
+		"BracketHighlighter",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Keymaps",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"requirementstxt",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"sublimelint",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
+		"SublimeREPL",
+		"SublimeTmpl",
+		"Terminal",
+		"Theme - Cobalt2",
+		"Virtualenv"
+	]
+}

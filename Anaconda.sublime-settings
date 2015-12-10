@@ -1,0 +1,11 @@
+{
+    "complete_parameters": true,
+    "complete_all_parameters": true,
+    "pep8_ignore":["E501"],
+    "anaconda_linting": false,
+    "enable_signatures_tooltip": true,
+    "enable_docstrings_tooltip": true,
+    "merge_signatures_and_doc": true,
+    "python_interpreter": "~/virtualenvs/nomal/bin/python",
+    "auto_python_builder_enabled": false
+}
