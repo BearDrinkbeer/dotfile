@@ -1,0 +1,9 @@
+sol
+git_util
+host_info
+humanize_duration
+last_job_id
+pip-completion
+pwd_info
+pwd_is_home
+pyenv
