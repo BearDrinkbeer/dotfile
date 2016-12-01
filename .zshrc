@@ -1,15 +1,17 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH=/home/beard/.oh-my-zsh
+  export ZSH=/home/beard/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+
+# Actually my work zshel without dependecy management and with oh-my-zsh.
+# # TODO remove oh-my-zsh.
 
 
 
-POWERLINE_HIDE_HOST_NAME="true"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,14 +55,30 @@ POWERLINE_HIDE_HOST_NAME="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git )
+plugins=(git pip command-not-found)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+source /data/repos/antigen/antigen.zsh
 
-source $ZSH/oh-my-zsh.sh
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+antigen bundle tonyseek/oh-my-zsh-virtualenv-prompt
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+# You probably will want to install powerline fonts https://github.com/powerline/fonts
+antigen theme tonyseek/oh-my-zsh-seeker-theme seeker
+
+# Tell antigen that you're done.
+antigen apply
+
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -72,11 +90,13 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -87,10 +107,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#virtualenvwrapper
-export WORKON_HOME=$HOME/virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
+
+
